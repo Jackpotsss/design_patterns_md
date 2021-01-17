@@ -1,0 +1,503 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>代理模式（Proxy） · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="策略模式（Strategy）.html" />
+    
+    
+    <link rel="prev" href="装饰者模式（Decorator）.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="面向对象（OO）.html">
+            
+                <a href="面向对象（OO）.html">
+            
+                    
+                    面向对象（OO）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="单例模式（Singleton）.html">
+            
+                <a href="单例模式（Singleton）.html">
+            
+                    
+                    单例模式（Singleton）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="工厂模式（Factory）.html">
+            
+                <a href="工厂模式（Factory）.html">
+            
+                    
+                    工厂模式（Factory）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="适配器模式（Adapter）.html">
+            
+                <a href="适配器模式（Adapter）.html">
+            
+                    
+                    适配器模式（Adapter）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="外观模式 (Facade">
+            
+                <span>
+            
+                    
+                    外观模式 (Facade)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="装饰者模式（Decorator）.html">
+            
+                <a href="装饰者模式（Decorator）.html">
+            
+                    
+                    装饰者模式（Decorator）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="代理模式（Proxy）.html">
+            
+                <a href="代理模式（Proxy）.html">
+            
+                    
+                    代理模式（Proxy）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="策略模式（Strategy）.html">
+            
+                <a href="策略模式（Strategy）.html">
+            
+                    
+                    策略模式（Strategy）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="模板方法模式（Template Method）.html">
+            
+                <a href="模板方法模式（Template Method）.html">
+            
+                    
+                    模板方法模式（Template Method）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="迭代器模式（Iterator）.html">
+            
+                <a href="迭代器模式（Iterator）.html">
+            
+                    
+                    迭代器模式（Iterator）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="观察者模式（Observer）.html">
+            
+                <a href="观察者模式（Observer）.html">
+            
+                    
+                    观察者模式（Observer）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="状态模式（State）.html">
+            
+                <a href="状态模式（State）.html">
+            
+                    
+                    状态模式（State）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="组合模式（Composite）.html">
+            
+                <a href="组合模式（Composite）.html">
+            
+                    
+                    组合模式（Composite）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="命令模式（Command）.html">
+            
+                <a href="命令模式（Command）.html">
+            
+                    
+                    命令模式（Command）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="模式总述.html">
+            
+                <a href="模式总述.html">
+            
+                    
+                    模式总述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="READ-ME.html">
+            
+                <a href="READ-ME.html">
+            
+                    
+                    READ-ME
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >代理模式（Proxy）</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4EE3;&#x7406;&#x6A21;&#x5F0F;&#xFF08;proxy&#xFF09;">&#x4EE3;&#x7406;&#x6A21;&#x5F0F;&#xFF08;Proxy&#xFF09;</h1>
+<h2 id="&#x8FDC;&#x7A0B;&#x4EE3;&#x7406;">&#x8FDC;&#x7A0B;&#x4EE3;&#x7406;</h2>
+<p>Java RMI</p>
+<h2 id="&#x865A;&#x62DF;&#x4EE3;&#x7406;">&#x865A;&#x62DF;&#x4EE3;&#x7406;</h2>
+<h2 id="&#x52A8;&#x6001;&#x4EE3;&#x7406;&#x4FDD;&#x62A4;">&#x52A8;&#x6001;&#x4EE3;&#x7406;(&#x4FDD;&#x62A4;)</h2>
+<p>Java&#x52A8;&#x6001;&#x4EE3;&#x7406;&#x4E5F;&#x662F;&#x5728;&#x53CD;&#x5C04;&#x5305;&#x4E2D;&#x63D0;&#x4F9B;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x52A8;&#x6001;&#x4EE3;&#x7406;&#x662F;&#x4E00;&#x79CD;&#x57FA;&#x4E8E;&#x53CD;&#x5C04;&#xFF0C;&#x6839;&#x636E;&#x63A5;&#x53E3;&#x751F;&#x6210;&#x4EE3;&#x7406;&#x7C7B;&#xFF08;&#x52A8;&#x6001;&#x751F;&#x6210;&#x5B57;&#x8282;&#x7801;&#xFF09;&#x7684;&#x6280;&#x672F;&#x3002;</p>
+<h3 id="&#x4F7F;&#x7528;">&#x4F7F;&#x7528;</h3>
+<p>&#x4F7F;&#x7528;Java&#x52A8;&#x6001;&#x4EE3;&#x7406;&#x4E3A;&#x76EE;&#x6807;&#x7C7B;&#x751F;&#x6210;&#x63A5;&#x53E3;&#x7684;&#x4EE3;&#x7406;&#x7C7B;&#xFF0C;&#x9996;&#x5148;<strong>&#x88AB;&#x4EE3;&#x7406;&#x7684;&#x7C7B;&#x5FC5;&#x987B;&#x5B9E;&#x73B0;&#x63A5;&#x53E3;</strong>&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">ISay</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sayHello</span><span class="hljs-params">()</span></span>;
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sayBye</span><span class="hljs-params">()</span></span>;
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">ISay</span> </span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sayHello</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;hello...&quot;</span>);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sayBye</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;sayBye...&quot;</span>);    
+    }
+}
+</code></pre>
+<p>&#x7B2C;&#x4E8C;&#x6B65;&#xFF0C;&#x7F16;&#x5199;<strong>&#x8C03;&#x7528;&#x5904;&#x7406;&#x5668;</strong>&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x4EE3;&#x7406;&#x5B9E;&#x4F8B;&#x90FD;&#x4F1A;&#x5173;&#x8054;&#x4E00;&#x4E2A;&#x8C03;&#x7528;&#x5904;&#x7406;&#x5668;&#xFF0C;&#x751F;&#x6210;&#x4EE3;&#x7406;&#x5B9E;&#x4F8B;&#x9700;&#x8981;&#x7528;&#x5230;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ProxyHandler</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">InvocationHandler</span></span>{
+
+    <span class="hljs-keyword">private</span> Object obj;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">ProxyHandler</span><span class="hljs-params">(Object obj)</span> </span>{
+        <span class="hljs-keyword">this</span>.obj = obj;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">invoke</span><span class="hljs-params">(Object proxy, Method method, Object[] args)</span> <span class="hljs-keyword">throws</span> Throwable </span>{
+        System.out.println(method.getName()+<span class="hljs-string">&quot;before method invoke...&quot;</span>);
+        Object result = method.invoke(obj, args);
+        System.out.println(method.getName()+<span class="hljs-string">&quot;after  method invoke...&quot;</span>);
+        <span class="hljs-keyword">return</span> result;
+    }
+}
+</code></pre>
+<p>&#x7B2C;&#x4E09;&#x6B65;&#xFF0C;&#x751F;&#x6210;&#x4EE3;&#x7406;&#x7C7B;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+
+    ISay hello = <span class="hljs-keyword">new</span> Hello();
+    ProxyHandler proxyHandler = <span class="hljs-keyword">new</span> ProxyHandler(hello);
+    ISay newProxyInstance =         (ISay)Proxy.newProxyInstance(hello.getClass().getClassLoader(),     hello.getClass().getInterfaces(), proxyHandler);
+    newProxyInstance.sayHello();
+    newProxyInstance.sayBye();
+
+}
+</code></pre>
+<p>Proxy.newProxyInstance &#x65B9;&#x6CD5;&#x9700;&#x8981;&#x4F20;&#x5165;3&#x4E2A;&#x53C2;&#x6570;&#xFF1A;<strong>&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x3001;&#x4EE3;&#x7406;&#x7C7B;&#x7684;&#x63A5;&#x53E3;&#x5217;&#x8868;&#x548C;&#x4EE3;&#x7406;&#x7C7B;&#x5904;&#x7406;&#x5668;</strong>&#x3002;</p>
+<p>&#x8F93;&#x51FA;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code>sayHello before method invoke...
+hello...
+sayHello after  method invoke...
+
+sayBye before method invoke...
+sayBye...
+sayBye after  method invoke...
+</code></pre><p>&#x200B;    </p>
+<h2 id="&#x5176;&#x4ED6;&#x53D8;&#x4F53;">&#x5176;&#x4ED6;&#x53D8;&#x4F53;</h2>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="装饰者模式（Decorator）.html" class="navigation navigation-prev " aria-label="Previous page: 装饰者模式（Decorator）">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="策略模式（Strategy）.html" class="navigation navigation-next " aria-label="Next page: 策略模式（Strategy）">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"代理模式（Proxy）","level":"1.8","depth":1,"next":{"title":"策略模式（Strategy）","level":"1.9","depth":1,"path":"target/策略模式（Strategy）.md","ref":"./target/策略模式（Strategy）.md","articles":[]},"previous":{"title":"装饰者模式（Decorator）","level":"1.7","depth":1,"path":"target/装饰者模式（Decorator）.md","ref":"./target/装饰者模式（Decorator）.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"target/代理模式（Proxy）.md","mtime":"2021-01-17T15:00:26.885Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-17T15:00:45.194Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

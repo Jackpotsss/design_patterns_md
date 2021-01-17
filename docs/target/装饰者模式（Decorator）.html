@@ -1,0 +1,480 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>装饰者模式（Decorator） · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="代理模式（Proxy）.html" />
+    
+    
+    <link rel="prev" href="外观模式 (Facade" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="面向对象（OO）.html">
+            
+                <a href="面向对象（OO）.html">
+            
+                    
+                    面向对象（OO）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="单例模式（Singleton）.html">
+            
+                <a href="单例模式（Singleton）.html">
+            
+                    
+                    单例模式（Singleton）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="工厂模式（Factory）.html">
+            
+                <a href="工厂模式（Factory）.html">
+            
+                    
+                    工厂模式（Factory）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="适配器模式（Adapter）.html">
+            
+                <a href="适配器模式（Adapter）.html">
+            
+                    
+                    适配器模式（Adapter）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="外观模式 (Facade">
+            
+                <span>
+            
+                    
+                    外观模式 (Facade)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="装饰者模式（Decorator）.html">
+            
+                <a href="装饰者模式（Decorator）.html">
+            
+                    
+                    装饰者模式（Decorator）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="代理模式（Proxy）.html">
+            
+                <a href="代理模式（Proxy）.html">
+            
+                    
+                    代理模式（Proxy）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="策略模式（Strategy）.html">
+            
+                <a href="策略模式（Strategy）.html">
+            
+                    
+                    策略模式（Strategy）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="模板方法模式（Template Method）.html">
+            
+                <a href="模板方法模式（Template Method）.html">
+            
+                    
+                    模板方法模式（Template Method）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="迭代器模式（Iterator）.html">
+            
+                <a href="迭代器模式（Iterator）.html">
+            
+                    
+                    迭代器模式（Iterator）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="观察者模式（Observer）.html">
+            
+                <a href="观察者模式（Observer）.html">
+            
+                    
+                    观察者模式（Observer）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="状态模式（State）.html">
+            
+                <a href="状态模式（State）.html">
+            
+                    
+                    状态模式（State）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="组合模式（Composite）.html">
+            
+                <a href="组合模式（Composite）.html">
+            
+                    
+                    组合模式（Composite）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="命令模式（Command）.html">
+            
+                <a href="命令模式（Command）.html">
+            
+                    
+                    命令模式（Command）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="模式总述.html">
+            
+                <a href="模式总述.html">
+            
+                    
+                    模式总述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="READ-ME.html">
+            
+                <a href="READ-ME.html">
+            
+                    
+                    READ-ME
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >装饰者模式（Decorator）</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x88C5;&#x9970;&#x8005;&#x6A21;&#x5F0F;&#xFF08;decorator&#xFF09;">&#x88C5;&#x9970;&#x8005;&#x6A21;&#x5F0F;&#xFF08;Decorator&#xFF09;</h1>
+<p>&#x88C5;&#x9970;&#x8005;&#x6A21;&#x5F0F;&#x5305;&#x62EC;&#x56DB;&#x90E8;&#x5206;&#xFF1A;</p>
+<ul>
+<li>&#x62BD;&#x8C61;&#x7EC4;&#x4EF6;</li>
+<li>&#x5177;&#x4F53;&#x7EC4;&#x4EF6;</li>
+<li>&#x62BD;&#x8C61;&#x88C5;&#x9970;&#x8005;</li>
+<li>&#x5177;&#x4F53;&#x88C5;&#x9970;&#x8005;</li>
+</ul>
+<p>&#x5176;&#x4E2D;&#x62BD;&#x8C61;&#x88C5;&#x9970;&#x8005;&#x548C;&#x5177;&#x4F53;&#x7EC4;&#x4EF6;&#x4E00;&#x6837;&#xFF0C;&#x90FD;&#x7EE7;&#x627F;&#x81EA;&#x62BD;&#x8C61;&#x7EC4;&#x4EF6;&#xFF0C;&#x62BD;&#x8C61;&#x88C5;&#x9970;&#x8005;&#x7EE7;&#x627F;&#x62BD;&#x8C61;&#x7EC4;&#x4EF6;&#x5E76;&#x4E0D;&#x662F;&#x8981;</p>
+<h2 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h2>
+<p>&#x200B;    &#x88C5;&#x9970;&#x8005;&#x6A21;&#x5F0F;&#x53C8;&#x540D;&#x5305;&#x88C5;&#x7C7B;&#x6A21;&#x5F0F;&#xFF08;Wrapper&#xFF09;&#xFF0C;&#x5728;&#x4E0D;&#x6539;&#x53D8;&#x539F;&#x6709;&#x5BF9;&#x8C61;&#x7684;&#x57FA;&#x7840;&#x4E4B;&#x4E0A;&#xFF0C;&#x52A8;&#x6001;&#x7684;&#x5C06;&#x529F;&#x80FD;&#x9644;&#x52A0;&#x5230;&#x5BF9;&#x8C61;&#x4E0A;&#xFF0C;&#x4EE5;&#x8FBE;&#x5230;&#x6269;&#x5C55;&#x539F;&#x6709;&#x5BF9;&#x8C61;&#x529F;&#x80FD;&#x7684;&#x76EE;&#x7684;&#x3002;&#x88C5;&#x9970;&#x8005;&#x63D0;&#x4F9B;&#x4E86;&#x6BD4;&#x7EE7;&#x627F;&#x66F4;&#x6709;&#x5F39;&#x6027;&#x7684;&#x66FF;&#x4EE3;&#x65B9;&#x6848;&#x3002;</p>
+<h2 id="&#x9002;&#x7528;&#x573A;&#x666F;">&#x9002;&#x7528;&#x573A;&#x666F;</h2>
+<ol>
+<li>&#x6269;&#x5C55;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x529F;&#x80FD;&#x6216;&#x8005;&#x7ED9;&#x4E00;&#x4E2A;&#x7C7B;&#x6DFB;&#x52A0;&#x9644;&#x52A0;&#x804C;&#x8D23;</li>
+<li>&#x7ED9;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x52A8;&#x6001;&#x7684;&#x6DFB;&#x52A0;&#x529F;&#x80FD;&#xFF0C;&#x6216;&#x52A8;&#x6001;&#x64A4;&#x9500;&#x529F;&#x80FD;&#x3002;</li>
+</ol>
+<p><strong>&#x4F18;&#x70B9;</strong> </p>
+<ol>
+<li>&#x7EE7;&#x627F;&#x7684;&#x6709;&#x529B;&#x8865;&#x5145;&#xFF0C;&#x6BD4;&#x7EE7;&#x627F;&#x7075;&#x6D3B;&#xFF0C;&#x4E0D;&#x6539;&#x53D8;&#x539F;&#x6709;&#x5BF9;&#x8C61;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x7ED9;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x6269;&#x5C55;&#x529F;&#x80FD;&#x3002;&#xFF08;&#x7EE7;&#x627F;&#x5728;&#x6269;&#x5C55;&#x529F;&#x80FD;&#x662F;&#x9759;&#x6001;&#x7684;&#xFF0C;&#x5FC5;&#x987B;&#x5728;&#x7F16;&#x8BD1;&#x65F6;&#x5C31;&#x786E;&#x5B9A;&#x597D;&#xFF0C;&#x800C;&#x4F7F;&#x7528;&#x88C5;&#x9970;&#x8005;&#x53EF;&#x4EE5;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x51B3;&#x5B9A;&#xFF0C;&#x88C5;&#x9970;&#x8005;&#x4E5F;&#x5EFA;&#x7ACB;&#x5728;&#x7EE7;&#x627F;&#x7684;&#x57FA;&#x7840;&#x4E4B;&#x4E0A;&#x7684;&#xFF09;</li>
+<li>&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x88C5;&#x9970;&#x7C7B;&#x4EE5;&#x53CA;&#x8FD9;&#x4E9B;&#x7C7B;&#x7684;&#x6392;&#x5217;&#x7EC4;&#x5408;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x4E0D;&#x540C;&#x7684;&#x6548;&#x679C;&#x3002;</li>
+<li>&#x7B26;&#x5408;&#x5F00;&#x95ED;&#x539F;&#x5219;</li>
+</ol>
+<p><strong>&#x7F3A;&#x70B9;</strong> </p>
+<ol>
+<li>&#x4F1A;&#x51FA;&#x73B0;&#x66F4;&#x591A;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x66F4;&#x591A;&#x7684;&#x7C7B;&#xFF0C;&#x589E;&#x52A0;&#x7A0B;&#x5E8F;&#x7684;&#x590D;&#x6742;&#x6027;&#x3002;</li>
+<li>&#x52A8;&#x6001;&#x88C5;&#x9970;&#x65F6;&#xFF0C;&#x591A;&#x5C42;&#x88C5;&#x9970;&#x65F6;&#x4F1A;&#x66F4;&#x590D;&#x6742;&#x3002;&#xFF08;&#x4F7F;&#x7528;&#x7EE7;&#x627F;&#x6765;&#x62D3;&#x5C55;&#x529F;&#x80FD;&#x4F1A;&#x589E;&#x52A0;&#x7C7B;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x4F7F;&#x7528;&#x88C5;&#x9970;&#x8005;&#x6A21;&#x5F0F;&#x4E0D;&#x4F1A;&#x50CF;&#x7EE7;&#x627F;&#x90A3;&#x6837;&#x589E;&#x52A0;&#x90A3;&#x4E48;&#x591A;&#x7C7B;&#x7684;&#x6570;&#x91CF;&#x4F46;&#x662F;&#x4F1A;&#x589E;&#x52A0;&#x5BF9;&#x8C61;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x5F53;&#x5BF9;&#x8C61;&#x7684;&#x6570;&#x91CF;&#x589E;&#x52A0;&#x5230;&#x4E00;&#x5B9A;&#x7684;&#x7EA7;&#x522B;&#x65F6;&#xFF0C;&#x65E0;&#x7591;&#x4F1A;&#x5927;&#x5927;&#x589E;&#x52A0;&#x6211;&#x4EEC;&#x4EE3;&#x7801;&#x8C03;&#x8BD5;&#x7684;&#x96BE;&#x5EA6;&#xFF09;</li>
+</ol>
+<h2 id="&#x5B9E;&#x4F8B;">&#x5B9E;&#x4F8B;</h2>
+<p>&#x200B;    &#x6211;&#x60F3;&#x5230;&#x4E00;&#x4E2A;&#x5F88;&#x597D;&#x7684;&#x4F8B;&#x5B50;&#x6765;&#x5F62;&#x5BB9;&#x88C5;&#x9970;&#x8005;&#x6A21;&#x5F0F;&#xFF0C;&#x590D;&#x4EC7;&#x8005;&#x5F71;&#x7247;&#x91CC;&#x6709;&#x4E00;&#x7EC4;&#x94A2;&#x94C1;&#x4FA0;&#x5927;&#x6218;&#x7EFF;&#x5DE8;&#x4EBA;&#x7684;&#x573A;&#x666F;&#xFF0C;&#x90A3;&#x6218;&#x6597;&#x573A;&#x9762;&#x53EB;&#x4E00;&#x4E2A;&#x9163;&#x7545;&#x6DCB;&#x6F13;&#x3002;&#x6211;&#x6BD4;&#x8F83;&#x611F;&#x5174;&#x8DA3;&#x7684;&#x662F;<strong>&#x94A2;&#x94C1;&#x4FA0;&#x7684;&#x53CD;&#x6D69;&#x514B;&#x88C5;&#x7532;</strong>&#x3002;</p>
+<p><img src="E:\A&#x6211;&#x7684;&#x6587;&#x6863;\&#x7C73;&#x5F00;- Markdown\md_resource\image-20200108150311167.png" alt="image-20200108150311167" style="zoom: 50%;"></p>
+<p>&#x88C5;&#x9970;java.io &#x7C7B;</p>
+<p><img src="E:\A&#x6211;&#x7684;&#x6587;&#x6863;\&#x7C73;&#x5F00;- Markdown\md_resource\image-20200110234443006.png" alt="image-20200110234443006"></p>
+<p>&#x200B;    &#x6B63;&#x50CF;&#x6211;&#x4EEC;&#x6700;&#x521D;&#x8BA4;&#x8BC6;IO&#x5305;&#x7684;&#x7C7B;&#x4E00;&#x6837;, java.io&#x5305;&#x4E2D;&#x7684;&#x7C7B;&#x5B9E;&#x5728;&#x662F;&#x592A;&#x591A;&#x4E86;, &#x5F88;&#x96BE;&#x4E00;&#x65F6;&#x95F4;&#x641E;&#x6E05;&#x6574;&#x4F53;&#x7ED3;&#x6784;, &#x4E5F;&#x4E0D;&#x77E5;&#x9053;&#x662F;&#x600E;&#x4E48;&#x8BBE;&#x8BA1;&#x7684;. &#x8FD9;&#x4E5F;&#x6B63;&#x662F;&#x88C5;&#x9970;&#x8005;&#x6A21;&#x5F0F;&#x6240;&#x5E26;&#x6765;&#x7684;&#x95EE;&#x9898;, &#x88C5;&#x9970;&#x8005;&#x4F1A;&#x4F7F;&#x7C7B;&#x7ED3;&#x6784;&#x590D;&#x6742;&#x5316;, &#x7C7B;&#x6570;&#x76EE;&#x589E;&#x591A;&#x3002;</p>
+<p>&#x200B;    &#x4F46;&#x662F;&#x5F53;&#x6211;&#x4EEC;&#x660E;&#x767D;&#x4E86;io&#x5305;&#x4E2D;&#x8FD0;&#x7528;&#x4E86;&#x88C5;&#x9970;&#x8005;&#x6A21;&#x5F0F;&#x4E4B;&#x540E;&#xFF0C;&#x518D;&#x5206;&#x6790;&#x8FD9;&#x4E9B;&#x7C7B;&#xFF0C;&#x5C31;&#x4F1A;&#x53D8;&#x5F97;&#x6E05;&#x6670;&#x591A;&#x4E86;&#xFF1A;</p>
+<ul>
+<li>InputStream &#x662F;&#x9876;&#x7EA7;&#x62BD;&#x8C61;&#x7C7B;</li>
+<li>FileInputStream&#xFF0C;StringBufferInputStream&#xFF0C;ByteArrayInputStream &#x90FD;&#x662F;&#x7EE7;&#x627F;&#x81EA;InputStream &#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E9B;&#x7C7B;&#x90FD;&#x63D0;&#x4F9B;&#x4E86;&#x6700;&#x57FA;&#x672C;&#x7684;&#x5B57;&#x8282;&#x8BFB;&#x53D6;&#x7684;&#x529F;&#x80FD;&#x3002;</li>
+<li>FilterInputStream &#x662F;&#x88C5;&#x9970;&#x57FA;&#x7C7B;</li>
+<li>BufferedInputStream &#x662F;&#x88C5;&#x9970;&#x57FA;&#x7C7B;&#x7684;&#x5B50;&#x7C7B;, &#x662F;&#x4E00;&#x4E2A;&#x5177;&#x4F53;&#x7684;&#x88C5;&#x9970;&#x8005;,&#x5B83;&#x52A0;&#x5165;&#x4E24;&#x79CD;&#x884C;&#x4E3A;: &#x5229;&#x7528;&#x7F13;&#x51B2;&#x8F93;&#x5165;&#x6765;&#x6539;&#x8FDB;&#x6027;&#x80FD;;
+&#x7528;&#x4E00;&#x4E2A;readLine() &#x65B9;&#x6CD5; (&#x7528;&#x6765;&#x4E00;&#x6B21;&#x8BFB;&#x53D6;&#x4E00;&#x884C;&#x6587;&#x672C;&#x8F93;&#x5165;&#x6570;&#x636E;) &#x6765;&#x589E;&#x5F3A;&#x63A5;&#x53E3;&#x3002;</li>
+</ul>
+<p>&#x200B;    <strong>&#x63A5;&#x53E3;&#x4F7F;&#x5F97;&#x5B89;&#x5168;&#x5730;&#x589E;&#x5F3A;&#x7C7B;&#x7684;&#x529F;&#x80FD;&#x6210;&#x4E3A;&#x53EF;&#x80FD;&#x3002;</strong>&#x5982;&#x679C;&#x4F7F;&#x7528;&#x62BD;&#x8C61;&#x7C7B;&#x6765;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#xFF0C;&#x90A3;&#x4E48;&#x7A0B;&#x5E8F;&#x5458;&#x9664;&#x4E86;&#x4F7F;&#x7528;&#x7EE7;&#x627F;&#x7684;&#x624B;&#x6BB5;&#x6765;&#x589E;&#x5F3A;&#x529F;&#x80FD;&#xFF0C;&#x518D;&#x6CA1;&#x6709;&#x5176;&#x4ED6;&#x7684;&#x9009;&#x62E9;&#x4E86;&#x3002;&#x8FD9;&#x6837;&#x7684;&#x5F97;&#x5230;&#x7684;&#x7C7B;&#x4E0E;&#x5305;&#x88C5;&#x7C7B;&#x76F8;&#x6BD4;&#xFF0C;&#x529F;&#x80FD;&#x66F4;&#x5DEE;&#xFF0C;&#x4E5F;&#x66F4;&#x52A0;&#x8106;&#x5F31;&#x3002;</p>
+<p>&#x200B;    &#x4F46;&#x662F;&#x901A;&#x8FC7;&#x5BF9;&#x63A5;&#x53E3;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x62BD;&#x8C61;&#x7684;&#x9AA8;&#x67B6;&#x5B9E;&#x73B0;&#x7C7B;&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x63A5;&#x53E3;&#x548C;&#x62BD;&#x8C61;&#x7C7B;&#x7684;&#x4F18;&#x70B9;&#x7ED3;&#x5408;&#x8D77;&#x6765;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="外观模式 (Facade" class="navigation navigation-prev " aria-label="Previous page: 外观模式 (Facade)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="代理模式（Proxy）.html" class="navigation navigation-next " aria-label="Next page: 代理模式（Proxy）">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"装饰者模式（Decorator）","level":"1.7","depth":1,"next":{"title":"代理模式（Proxy）","level":"1.8","depth":1,"path":"target/代理模式（Proxy）.md","ref":"./target/代理模式（Proxy）.md","articles":[]},"previous":{"title":"外观模式 (Facade)","level":"1.6","depth":1,"path":"target/外观模式 (Facade","ref":"./target/外观模式 (Facade","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"target/装饰者模式（Decorator）.md","mtime":"2021-01-17T15:00:26.884Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-17T15:00:45.194Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
